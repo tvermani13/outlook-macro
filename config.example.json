@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "mailboxes": [
+    {
+      "id": "friend",
+      "label": "Friend",
+      "expectedUsername": "friend@example.com"
+    },
+    {
+      "id": "teammate",
+      "label": "Teammate",
+      "expectedUsername": "teammate@example.com"
+    }
+  ],
+  "subjectRules": [
+    {
+      "name": "outreach-example",
+      "enabled": true,
+      "matchPattern": "^Drew Outreach\\s*\\|\\s*(?<portion>[^|]+?)\\s*\\|",
+      "matchFlags": "i",
+      "extractGroup": "portion",
+      "onExtractionFailure": "skip"
+    }
+  ],
+  "scan": {
+    "lookbackDays": 90,
+    "timeZone": "America/New_York",
+    "sentFolders": [
+      "sentitems"
+    ],
+    "responseFolders": [
+      "inbox"
+    ],
+    "onlyResponsesFromOriginalRecipients": true,
+    "excludeSenderAddresses": [],
+    "maxMessagesPerFolder": 10000,
+    "includeNoResponseRows": true
+  },
+  "output": {
+    "directory": "./output",
+    "csvFile": "first-responses.csv",
+    "jsonFile": "first-responses.json",
+    "attachmentMode": "metadata"
+  }
+}

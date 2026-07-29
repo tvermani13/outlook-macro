@@ -1,0 +1,30 @@
+{
+  "name": "outlook-first-response-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministically match the first Outlook response to config-selected sent messages.",
+  "scripts": {
+    "preauth": "npm run build --silent",
+    "auth": "node dist/src/cli.js auth",
+    "prescan": "npm run build --silent",
+    "scan": "node dist/src/cli.js scan",
+    "prevalidate-config": "npm run build --silent",
+    "validate-config": "node dist/src/cli.js validate-config",
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test test/**/*.test.ts"
+  },
+  "dependencies": {
+    "@azure/msal-node": "5.4.2",
+    "@azure/msal-node-extensions": "5.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "4.23.1",
+    "typescript": "7.0.2"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
