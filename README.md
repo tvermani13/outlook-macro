@@ -4,7 +4,7 @@ This local TypeScript tool scans configured Outlook mailboxes for sent messages
 whose subjects match editable rules, finds the first external response to each
 message, and writes a CSV table plus a detailed JSON file.
 
-Feature catalog: [`FEATURES.md`](FEATURES.md). Runbook: [`RUNBOOK.md`](RUNBOOK.md). Workspace architecture: [`../ECOSYSTEM.md`](../ECOSYSTEM.md).
+Feature catalog: [`FEATURES.md`](FEATURES.md). Runbook: [`RUNBOOK.md`](RUNBOOK.md).
 
 It does not use AI or fuzzy extraction. Subject selection, subject-portion
 extraction, sender/recipient extraction, body extraction, attachment metadata,

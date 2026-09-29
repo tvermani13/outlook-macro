@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-09-28 (code unchanged since 2026-07-29)
 
-README: [`README.md`](README.md). Runbook: [`RUNBOOK.md`](RUNBOOK.md). Ecosystem: [`../ECOSYSTEM.md`](../ECOSYSTEM.md).
+README: [`README.md`](README.md). Runbook: [`RUNBOOK.md`](RUNBOOK.md).
 
 ## Purpose
 
